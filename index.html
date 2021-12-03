@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.R.</title>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+<body>
+    <a-scene embedded arjs="sourceType: webcam;">
+        <a-marker-camera type='pattern' url='/pattern-THEO GITHub final (1).patt'></a-marker-camera>
+        <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
+        <a-box position="0 -1 0" color="red" gltf-model="/pattern-marker.png">
+        </a-box>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+</html>
